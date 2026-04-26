@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Country Capital</title>
+</head>
+<body>
+
+<h3>Select Country:</h3>
+
+<select id="c" onchange="cap.innerHTML = this.value ? 'Capital: ' + this.value : ''">
+  <option value="">--Select--</option>
+  <option value="Ottawa">Canada</option>
+  <option value="New Delhi">India</option>
+  <option value="Tokyo">Japan</option>
+  <option value="London">UK</option>
+  <option value="Washington, D.C.">USA</option>
+</select>
+
+<span id="cap" style="color:blue;font-weight:bold"></span>
+
+</body>
+</html>
