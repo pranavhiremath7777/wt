@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+</head>
+<body>
+
+<form id="f">
+  First Name: <input id="firstName"><br><br>
+  Last Name: <input id="lastName"><br><br>
+  Password: <input type="password" id="password"><br><br>
+  Email: <input id="email"><br><br>
+  Mobile: <input id="mobile"><br><br>
+  Address: <textarea id="address"></textarea><br><br>
+  <button>Register</button>
+</form>
+
+<script>
+f.onsubmit = e => {
+  e.preventDefault();
+
+  let msg = "",
+      fn = firstName.value.trim(),
+      ln = lastName.value.trim(),
+      pw = password.value.trim(),
+      em = email.value.trim(),
+      mb = mobile.value.trim(),
+      ad = address.value.trim();
+
+  if (!/^[A-Za-z]{6,}$/.test(fn)) msg += "Invalid First Name\n";
+  if (pw.length < 6) msg += "Password too short\n";
+  if (!/^\S+@\S+\.\S+$/.test(em)) msg += "Invalid Email\n";
+  if (!/^\d{10}$/.test(mb)) msg += "Invalid Mobile\n";
+  if (!ln) msg += "Last Name required\n";
+  if (!ad) msg += "Address required\n";
+
+  alert(msg || "Registration Successful!");
+};
+</script>
+
+</body>
+</html>
