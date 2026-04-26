@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>JavaScript Popup Programs</h3>
+
+<!-- a) Display Date -->
+<input type="text" id="d">
+<button onclick="showDate()">Display Date</button><br><br>
+
+<!-- Other buttons -->
+<button onclick="fact()">Factorial</button>
+<button onclick="table()">Multiplication Table</button>
+<button onclick="sum()">Sum</button>
+
+<script>
+// a) Display Date
+function showDate(){
+  d.value = new Date();
+}
+
+// b) Factorial
+function fact(){
+  let n = prompt("Enter number"), f = 1;
+  for(let i=1;i<=n;i++) f*=i;
+  alert("Factorial = " + f);
+}
+
+// c) Multiplication Table
+function table(){
+  let n = prompt("Enter number"), res="";
+  for(let i=1;i<=10;i++) res += n+" x "+i+" = "+(n*i)+"\n";
+  alert(res);
+}
+
+
+function sum(){
+  let a = +prompt("Enter first number");
+  let b = +prompt("Enter second number");
+  document.write("Sum = " + (a + b));
+}
+
+</script>
+
+</body>
+</html>
