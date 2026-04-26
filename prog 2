@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Animation</title>
+</head>
+<body>
+
+<p id="d" align="center">TEXT</p>
+
+<script>
+let s = 5, g = 1, t = d;
+
+setInterval(() => {
+  s += g * 5;
+  t.innerHTML = g > 0 ? "TEXT GROWING" : "TEXT SHRINKING";
+  t.style = `font-size:${s}px;color:${g>0?"red":"blue"}`;
+  if (s >= 50 || s <= 5) g *= -1;
+}, 100);
+</script>
+
+</body>
+</html>
