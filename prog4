@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Text Analysis</h3>
+
+<form onsubmit="f(event)">
+<textarea id="t" rows="5" cols="40"></textarea><br><br>
+<button>Submit</button>
+</form>
+
+<script>
+function f(e){
+  e.preventDefault();
+  let x = t.value;
+  alert(
+    "Characters: " + x.replace(/\s+/g,'').length +
+    "\nWords: " + (x.trim()? x.trim().split(/\s+/).length : 0) +
+    "\nLines: " + (x? x.split("\n").length : 0)
+  );
+}
+</script>
+
+</body>
+</html>
