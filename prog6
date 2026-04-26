@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Demo</title>
+
+<style>
+body { background: lightblue; font-family: Arial; }
+h1 { color: darkblue; }
+.i { color: green; font-size: 20px; }
+</style>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>CSS Types</h1>
+
+<p style="color:red;">Inline CSS</p>
+<p class="i">Internal CSS</p>
+<p class="e">External CSS</p>
+
+</body>
+</html>
+
+diffrent file(style.css)
+.e{
+  color: purple;
+  font-size: 22px;
+  font-weight: bold;
+}
