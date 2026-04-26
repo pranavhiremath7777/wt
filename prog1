@@ -27,12 +27,19 @@ f.onsubmit = e => {
       mb = mobile.value.trim(),
       ad = address.value.trim();
 
-  if (!/^[A-Za-z]{6,}$/.test(fn)) msg += "Invalid First Name\n";
-  if (pw.length < 6) msg += "Password too short\n";
-  if (!/^\S+@\S+\.\S+$/.test(em)) msg += "Invalid Email\n";
-  if (!/^\d{10}$/.test(mb)) msg += "Invalid Mobile\n";
-  if (!ln) msg += "Last Name required\n";
-  if (!ad) msg += "Address required\n";
+  if (fn.length < 6) msg += "First Name must be 6 letters\n";
+
+if (pw.length < 6) msg += "Password too short\n";
+
+if (!em.includes("@") || !em.includes("."))
+  msg += "Invalid Email\n";
+
+if (mb.length != 10 || isNaN(mb))
+  msg += "Invalid Mobile\n";
+
+if (ln == "") msg += "Last Name required\n";
+
+if (ad == "") msg += "Address required\n";
 
   alert(msg || "Registration Successful!");
 };
