@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Slider</title>
+<style>
+#s{position:relative;width:600px;height:400px}
+img{width:100%;height:100%;display:none}
+.a{display:block}
+#p,#n{position:absolute;top:45%;background:#0008;color:#fff;border:0;padding:10px}
+#p{left:10px} #n{right:10px}
+</style>
+</head>
+<body>
+
+<div id="s">
+<img src="img1.jpg" class="a">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<button id="p" onclick="sh((x+2)%3)">Prev</button>
+<button id="n" onclick="sh((x+1)%3)">Next</button>
+</div><br>
+
+<button onclick="sh(0)">Image 1</button>
+<button onclick="sh(1)">Image 2</button>
+<button onclick="sh(2)">Image 3</button>
+
+<script>
+x=0;
+i=document.querySelectorAll("img");
+
+function sh(n){
+i[x].className="";
+x=n;
+i[x].className="a";
+}
+
+setInterval(()=>sh((x+1)%3),3000);
+</script>
+
+</body>
+</html>
