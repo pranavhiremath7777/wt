@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Content Manipulation</h3>
+
+<div id="c" style="border:1px solid;padding:10px;min-height:80px"></div><br>
+
+<input id="t" placeholder="Enter text">
+
+<button onclick="add()">Add</button>
+<button onclick="rep()">Replace</button>
+<button onclick="del()">Delete</button>
+
+<script>
+function add(){
+  if(!t.value.trim()) return alert("Enter text");
+  c.innerHTML += t.value + "<br>";
+  t.value="";
+}
+
+function rep(){
+  if(!t.value.trim()) return alert("Enter text");
+  c.innerHTML = t.value;
+  t.value="";
+}
+
+function del(){
+  c.innerHTML="";
+}
+</script>
+
+</body>
+</html>
