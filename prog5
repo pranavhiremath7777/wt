@@ -28,18 +28,17 @@ function fact(){
 
 // c) Multiplication Table
 function table(){
-  let n = prompt("Enter number"), res="";
-  for(let i=1;i<=10;i++) res += n+" x "+i+" = "+(n*i)+"\n";
-  alert(res);
+  let n = prompt("Enter number"), r="";
+  for(let i=1;i<=10;i++) r += n+" x "+i+" = "+(n*i)+"\n";
+  alert(r);
 }
 
-
+// d) Sum (continuous input until Cancel)
 function sum(){
-  let a = +prompt("Enter first number");
-  let b = +prompt("Enter second number");
-  document.write("Sum = " + (a + b));
+  let t = 0, n;
+  while(n = prompt("Enter number (Cancel to stop)")) t += +n;
+  alert("Sum = " + t);
 }
-
 </script>
 
 </body>
