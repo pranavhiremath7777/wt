@@ -4,8 +4,6 @@
 <title>CSS Demo</title>
 
 <style>
-body { background: lightblue; font-family: Arial; }
-h1 { color: darkblue; }
 .i { color: green; font-size: 20px; }
 </style>
 
@@ -22,6 +20,7 @@ h1 { color: darkblue; }
 
 </body>
 </html>
+
 
 diffrent file(style.css)
 .e{
